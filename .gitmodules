@@ -1,3 +1,4 @@
-[submodule "laboratory-1"]
-	path = laboratory-1
-	url = https://git.miem.hse.ru/laboratory-2/laboratory-1.git
+
+[submodule "linalg"]
+	path = linalg
+	url = https://git.miem.hse.ru/laboratory-2/linalg.git

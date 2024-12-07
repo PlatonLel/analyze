@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(testAnalyze)
 
 # Добавляем поддиректорию Linalg
-add_subdirectory(Linalg)
+add_subdirectory(linalg/Linalg)
 
 # Добавляем исполняемый файл теста
 add_executable(test Source/test.cpp Complex/Source/Complex.cpp)
