@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <cmath>
 
@@ -10,6 +11,7 @@ public:
     Complex() : real(0.0), img(0.0) {}
     Complex(double r) : real(r), img(0.0) {}
     Complex(double r, double i) : real(r), img(i) {}
+    Complex(std::initializer_list<double> lst);
 
     double Real() const {return real;}
     double Imag() const {return img;}

@@ -3,13 +3,11 @@
 #include <string>
 
 int main() {
-    linalg::Matrix<char> m({{'a', 'b'}, {'c','d'}});
-    linalg::Matrix<char> m2({{1.2,2.2,4.2,5.2}, {1.2,2.2,4.2,5.2}});
-//    m = m2;
-    std::cout << m2;
-    Complex c(1,2.5);
-    Complex c2;
-    std::cout << c;
-    std::cin >> c2;
-    std::cout << c2;
+    linalg::Matrix<Complex> matrix = {
+            { Complex(1.0, 1.1), Complex(2.0, 0.0), Complex(0.0, -1.0) },
+            { Complex(0.00001, 0.0), Complex(3.0, -348193641.0), Complex(1.0, 1.00912) }
+    };
+    linalg::Matrix<double> m = {{1.2,2.01,3.6},{1.023,2.6023,3.}};
+    std::cout << matrix;
+
 }

@@ -1,4 +1,4 @@
-#include "../Include/Complex.h"
+#include "Complex.h"
 #include <stdexcept>
 #include <string>
 
@@ -94,4 +94,10 @@ std::istream& operator>>(std::istream& is, Complex& c) {
         is.setstate(std::ios::failbit);
     }
     return is;
+}
+
+Complex::Complex(std::initializer_list<double> lst) {
+auto it = lst.begin();
+real = (lst.size() > 0) ? *it++ : 0.0;
+img = (lst.size() > 1) ? *it : 0.0;
 }
