@@ -4,7 +4,7 @@
 #include <filesystem>
 
 
-int main() {
+ int main() {
     linalg::Matrix<Complex> matrix = {
             { Complex(1.0, 1.1), Complex(2.0, 0.0), Complex(0.0, -1.0) },
             { Complex(0.1, 0.0), Complex(3.0, -3.0), Complex(1.0, 1.0) }
