@@ -12,6 +12,7 @@ public:
     Complex(double r) : real(r), img(0.0) {}
     Complex(double r, double i) : real(r), img(i) {}
     Complex(std::initializer_list<double> lst);
+    double modulus() const;
 
     double Real() const {return real;}
     double Imag() const {return img;}
@@ -31,7 +32,13 @@ public:
     bool operator==(const Complex& c) const;
     bool operator!=(const Complex& other) const;
 
+    bool operator<(const Complex& other) const;
+    bool operator<=(const Complex& other) const;
+
     friend std::ostream& operator<<(std::ostream& os, const Complex& c);
     friend std::istream& operator>>(std::istream& is, Complex& c);
 };
 
+namespace std {
+    double abs(const Complex& c);
+}

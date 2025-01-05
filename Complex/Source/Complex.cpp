@@ -2,6 +2,12 @@
 #include <stdexcept>
 #include <string>
 
+namespace std {
+    double abs(const Complex& c) {
+        return std::sqrt(c.Real() * c.Real() + c.Imag() * c.Imag());
+    }
+}
+
 Complex Complex::operator+(const Complex& c) const {
     return Complex(real + c.real, img + c.img);
 }
@@ -100,4 +106,16 @@ Complex::Complex(std::initializer_list<double> lst) {
 auto it = lst.begin();
 real = (lst.size() > 0) ? *it++ : 0.0;
 img = (lst.size() > 1) ? *it : 0.0;
+}
+
+double Complex::modulus() const {
+    return std::sqrt(real * real + img * img);
+}
+
+bool Complex::operator<(const Complex& other) const {
+    return this->modulus() < other.modulus();
+}
+
+bool Complex::operator<=(const Complex& other) const {
+    return this->modulus() <= other.modulus();
 }
