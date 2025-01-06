@@ -7,8 +7,10 @@ project(testAnalyze)
 
 add_subdirectory(linalg/Linalg)
 
+add_subdirectory(googletest)
+
 add_executable(test Source/test.cpp Complex/Source/Complex.cpp)
 
 target_include_directories(test PUBLIC Complex/Include)
 
-target_link_libraries(test PRIVATE Linalg)
+target_link_libraries(test PRIVATE Linalg gtest)

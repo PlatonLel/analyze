@@ -119,3 +119,11 @@ bool Complex::operator<(const Complex& other) const {
 bool Complex::operator<=(const Complex& other) const {
     return this->modulus() <= other.modulus();
 }
+
+bool Complex::operator>(const Complex& other) const {
+    return !(*this < other);
+}
+
+bool Complex::operator>=(const Complex& other) const {
+    return !(*this <= other);
+}
