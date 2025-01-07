@@ -1,15 +1,8 @@
 #include <Linalg.h>
 #include <Complex.h>
-#include "../Include/ComplexTest.h"
-#include "../Include/MatrixTest.h"
-#include <string>
-#include <filesystem>
-#include <gtest/gtest.h>
+#include <iostream>
 
-
-int main(int argc, char* argv[]) {
-    ::testing::InitGoogleTest(&argc, argv);
-
+int main(int argc, char* argv[] ) {
     if (argc == 2) {
         try {
             linalg::analyze_matrix(argv[1]);
@@ -21,6 +14,4 @@ int main(int argc, char* argv[]) {
         std::cerr << "Usage: " << argv[0] << " [matrix_file]" << std::endl;
         return 1;
     }
-
-    return RUN_ALL_TESTS();
 }
