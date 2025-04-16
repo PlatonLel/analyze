@@ -1,5 +1,5 @@
 
 [submodule "linalg"]
 	path = linalg
-	url = https://git.miem.hse.ru/laboratory-2/linalg.git
+	url = https://github.com/PlatonLel/linalg
 
